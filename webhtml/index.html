@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sea.js</title>
+</head>
+<body>
+	
+	<button type="button" id="btn">按钮</button>
+
+	<script src="../moudle/seajs-3.0.0/lib/sea.js"></script>
+	<script type="text/javascript">
+	    // Set configuration
+	    seajs.config({
+	        alias: {
+	            "jquery": "../moudle/jquery/jquery.js"
+	        }
+	    });
+	 	// 加载入口模块
+	    seajs.use("../js/indexsea");
+	 </script>
+</body>
+</html>
