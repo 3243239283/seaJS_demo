@@ -8,16 +8,17 @@
 	
 	<button type="button" id="btn">按钮</button>
 
-	<script src="../moudle/seajs-3.0.0/lib/sea.js"></script>
+	<script src="../moudle/seajs-3.0.0/sea.js"></script>
 	<script type="text/javascript">
-	    // Set configuration
-	    seajs.config({
-	        alias: {
-	            "jquery": "../moudle/jquery/jquery.js"
-	        }
-	    });
+		// seajs 的简单配置
+		seajs.config({
+		  alias: {
+		    "jquery": "../moudle/jquery/jquery.js",
+		    "all":"../js/all.js"
+		  }
+		})
 	 	// 加载入口模块
 	    seajs.use("../js/indexsea");
-	 </script>
+	</script>
 </body>
 </html>
