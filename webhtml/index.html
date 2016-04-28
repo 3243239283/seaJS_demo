@@ -9,6 +9,25 @@
 	<button type="button" id="btn">按钮</button>
 	<button type="button" id="laybtn">按钮</button>
 
+	<div id="page"></div>
+
+	<!-- javascript模板引擎laytpl.js 功能暂未实现 -->
+	<div id="view"></div>
+  	<script id="tpl" type="text/html">
+    	<h3>{{ d.title }}</h3>
+    	<p class="intro">{{ d.intro }}</p>
+    	<ul>
+    	{{# for(var i = 0, len = d.list.length; i < len; i++){ }}
+      	<li>
+          	<span>{{ d.list[i].name }}</span>
+          	<span>所在城市:{{ d.list[i].city }}</span>
+      	</li>
+    	{{# } }}
+    	</ul>
+  	</script>
+
+
+
 	<script src="../js/moudle/seajs-3.0.0/sea.js"></script>
 	<script src="../js/page/config.js"></script>
 	<script>
