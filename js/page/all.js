@@ -1,6 +1,5 @@
 
 define(function(require,exprots,moudle){
-	var $=require('jquery');
 	var layer=require('layer');
 	var laypage=require('laypage');
 	var laytpl=require('laytpl');
@@ -24,7 +23,7 @@ define(function(require,exprots,moudle){
 	    groups: 7 //连续显示分页数
 	});
 
-	$.getJSON("../../json/laytpl.json",function(data){
+	$.getJSON("../json/laytpl.json",function(data){
         var tpl = document.getElementById('tpl').innerHTML; //读取模版
         //方式一：异步渲染（推荐）
         laytpl(tpl).render(data, function(render){
