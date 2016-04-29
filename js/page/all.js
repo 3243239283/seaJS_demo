@@ -1,5 +1,5 @@
-
 define(function(require,exprots,moudle){
+	var $=require('jquery');
 	var layer=require('layer');
 	var laypage=require('laypage');
 	var laytpl=require('laytpl');
@@ -7,15 +7,15 @@ define(function(require,exprots,moudle){
 	var laypagecss=require('laypagecss');
 	var stylecss=require('stylecss');
 
+	//jquery使用
 	$('#btn').click(function(){
         alert('22');
     });
-
     $('#laybtn').click(function(){
     	layer.open('ss');
     });
 
-    //自定义皮肤
+    //laypage插件的使用
     laypage({
 	    cont: $('#page'),//容器。值支持id名、原生dom对象，jquery对象,
 	    pages: 100, //总页数
@@ -23,9 +23,9 @@ define(function(require,exprots,moudle){
 	    groups: 7 //连续显示分页数
 	});
 
+    //laytpl插件的使用，方式一：异步渲染（推荐，此处使用）
 	$.getJSON("../json/laytpl.json",function(data){
         var tpl = document.getElementById('tpl').innerHTML; //读取模版
-        //方式一：异步渲染（推荐）
         laytpl(tpl).render(data, function(render){
             document.getElementById('view').innerHTML = render;
         });
