@@ -4,6 +4,8 @@ seajs.config({
 	alias: {
 		'jquery': 'js/moudle/jquery/jquery',
 		'all': 'js/page/all',
+		'hand':'js/page/hand',
+		'handlebars':'js/moudle/handlebars/lib/handlebars',
 		'layer':'js/moudle/layer/layer',
 		'laypage':'js/moudle/page/laypage/laypage',
 		'laytpl':'js/moudle/laytpl/laytpl',

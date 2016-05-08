@@ -31,7 +31,7 @@ define(function(require,exprots,moudle){
         });
     });
 
-})
+});
 
 
 
